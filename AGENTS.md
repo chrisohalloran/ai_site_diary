@@ -479,3 +479,7 @@ You can also assert on the redirect tuple directly without following it:
 
     assert {:error, {:live_redirect, %{to: "/reports"}}} =
       view |> form("#report-form", report: attrs) |> render_submit()
+
+## Reuse first
+
+Before adding code, tables or concepts, first check whether existing code can be reused or removed, or concepts condensed. Prefer extending what already exists over building parallel copies. Report net lines added or removed in the PR description. (See `.cursor/rules/reuse-first.mdc`.)
